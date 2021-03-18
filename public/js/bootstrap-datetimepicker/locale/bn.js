@@ -87,7 +87,7 @@
         },
         //Bengali is a vast language its spoken
         //in different forms in various parts of the world.
-        //I have just generalized with most common one used
+        //I have just generalized with most src one used
         meridiem : function (hour, minute, isLower) {
             if (hour < 4) {
                 return 'রাত';

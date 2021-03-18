@@ -8,7 +8,7 @@
 /* *html{background-image: url(about:blank); background-attachment: fixed;} */
 html #layuicss-layer{display: none; position: absolute; width: 1989px;}
 
-/* common */
+/* src */
 .layui-layer-shade, .layui-layer{position:fixed; _position:absolute; pointer-events: auto;}
 .layui-layer-shade{top:0; left:0; width:100%; height:100%; _height:expression(document.body.offsetHeight+"px");}
 .layui-layer{-webkit-overflow-scrolling: touch;}

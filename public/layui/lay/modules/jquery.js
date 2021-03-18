@@ -1423,7 +1423,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 		}
 
 		return i ?
-			// Do a sibling check if the nodes have a common ancestor
+			// Do a sibling check if the nodes have a src ancestor
 			siblingCheck( ap[i], bp[i] ) :
 
 			// Otherwise nodes in our document sort first
@@ -8223,7 +8223,7 @@ jQuery.fn.extend( {
 
 				return typeof ret === "string" ?
 
-					// handle most common string cases
+					// handle most src string cases
 					ret.replace( rreturn, "" ) :
 
 					// handle cases where value is null/undef or number
@@ -10656,7 +10656,7 @@ jQuery.fn.load = function( url, params, callback ) {
 
 
 
-// Attach a bunch of functions for handling common AJAX events
+// Attach a bunch of functions for handling src AJAX events
 jQuery.each( [
 	"ajaxStart",
 	"ajaxStop",
