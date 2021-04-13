@@ -11,7 +11,7 @@
  Target Server Version : 50725
  File Encoding         : 65001
 
- Date: 18/03/2021 21:18:53
+ Date: 14/04/2021 00:55:02
 */
 
 SET NAMES utf8mb4;
@@ -24,9 +24,11 @@ DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
   `admin_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `admin_pwd` varchar(64) NOT NULL,
-  `admin_name` varchar(64) NOT NULL,
+  `admin_loginname` varchar(64) NOT NULL,
   `admin_sex` varchar(10) NOT NULL,
   `admin_dept` varchar(255) NOT NULL,
+  `admin_phone` varchar(255) NOT NULL,
+  `admin_name` varchar(255) NOT NULL,
   PRIMARY KEY (`admin_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
@@ -34,7 +36,7 @@ CREATE TABLE `admin` (
 -- Records of admin
 -- ----------------------------
 BEGIN;
-INSERT INTO `admin` VALUES (1, '123456', 'admintest', '1', '信息科学与工程学院');
+INSERT INTO `admin` VALUES (1, '123456', 'admintest', '1', '信息科学与工程学院', '17376594450', '徐佳男');
 COMMIT;
 
 -- ----------------------------
@@ -65,10 +67,12 @@ DROP TABLE IF EXISTS `stu`;
 CREATE TABLE `stu` (
   `stu_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `stu_pwd` varchar(64) NOT NULL,
-  `stu_name` varchar(255) NOT NULL,
+  `stu_loginname` varchar(255) NOT NULL,
   `stu_sex` varchar(10) NOT NULL,
   `stu_dept` varchar(255) NOT NULL,
   `stu_class` varchar(255) NOT NULL,
+  `stu_phone` varchar(255) NOT NULL,
+  `stu_name` varchar(255) NOT NULL,
   PRIMARY KEY (`stu_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
@@ -76,7 +80,7 @@ CREATE TABLE `stu` (
 -- Records of stu
 -- ----------------------------
 BEGIN;
-INSERT INTO `stu` VALUES (1, '123456', 'teststu', '1', '信息与工程学院', '计算机174');
+INSERT INTO `stu` VALUES (2000001, '123456', 'teststu', '1', '信息与工程学院', '计算机174', '17376594450', '徐佳男');
 COMMIT;
 
 -- ----------------------------

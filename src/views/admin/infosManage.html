@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>任务 - 用户端 - 学生组织电子材料收集管理平台</title>
+    <title>成员管理 - 管理员端 - 学生组织电子材料收集管理平台</title>
     <link rel="icon" href="../../../public/images/favicon.ico" type="image/ico">
     <link href="../../../public/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../../public/css/materialdesignicons.min.css" rel="stylesheet">
@@ -25,7 +25,8 @@
                 <nav class="sidebar-main">
                     <ul class="nav nav-drawer">
                         <li class="nav-item"> <a href="main.html"><i class="mdi mdi-home"></i> 首页</a> </li>
-                        <li class="nav-item active"> <a href="stuTask.html"><i class="mdi mdi-flag-checkered"></i> 任务管理</a> </li>
+                        <li class="nav-item"> <a href="adminTask.html"><i class="mdi mdi-flag-checkered"></i> 任务管理</a> </li>
+                        <li class="nav-item active"> <a href="infosManage.html"><i class="mdi mdi-account-multiple"></i> 成员管理</a> </li>
                         <li class="nav-item"> <a href="profile.html"><i class="mdi mdi-account"></i> 个人信息管理</a> </li>
                     </ul>
                 </nav>
@@ -52,14 +53,14 @@
                             <span class="lyear-toggler-bar"></span>
                             <span class="lyear-toggler-bar"></span>
                         </div>
-                        <span class="navbar-page-title"> 任务管理 </span>
+                        <span class="navbar-page-title"> 成员管理 </span>
                     </div>
 
                     <ul class="topbar-right">
                         <li class="dropdown dropdown-profile">
                             <a href="javascript:void(0)" data-toggle="dropdown">
-                                <img class="img-avatar img-avatar-48 m-r-10" src="../../../public/images/users/gn.jpg" />
-                                <span>王五<span class="caret"></span></span>
+                                <img class="img-avatar img-avatar-48 m-r-10" src="../../../public/images/users/avatar.png" alt="管理员" />
+                                <span>院系管理员<span class="caret"></span></span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right">
                                 <li> <a href="profile.html"><i class="mdi mdi-account"></i> 个人信息</a> </li>
@@ -119,7 +120,8 @@
                                             <ul class="dropdown-menu">
                                                 <li> <a tabindex="-1" href="javascript:void(0)" data-field="title">全部</a> </li>
                                                 <li> <a tabindex="-1" href="javascript:void(0)" data-field="title">姓名</a> </li>
-                                                <li> <a tabindex="-1" href="javascript:void(0)" data-field="cat_name">主题</a> </li>
+                                                <li> <a tabindex="-1" href="javascript:void(0)" data-field="cat_name">ID</a> </li>
+                                                <li> <a tabindex="-1" href="javascript:void(0)" data-field="cat_name">手机号</a> </li>
                                             </ul>
                                         </div>
                                         <input type="text" class="form-control" value="" name="keyword" placeholder="请输入搜索内容">
@@ -127,116 +129,58 @@
                                 </form>
                             </div>
                             <div class="card-header">
-                                <h4>任务信息</h4>
+                                <h4>用户信息</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-hover">
                                         <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>任务名称</th>
-                                            <th>开始日期</th>
-                                            <th>截止日期</th>
-                                            <th>状态</th>
-                                            <th>发布者</th>
+                                            <th>ID</th>
+                                            <th>姓名</th>
+                                            <th>性别</th>
+                                            <th>手机号</th>
+                                            <th>学院</th>
+                                            <th>班级</th>
                                             <th>操作</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td>1</td>
-                                            <td>寒假返家统计表收集</td>
-                                            <td>2021/02/01</td>
-                                            <td>2020/02/05</td>
-                                            <td><span class="label label-warning">未开始</span></td>
-                                            <td>院系管理员</td>
+                                            <td>2000001</td>
+                                            <td>徐佳男</td>
+                                            <td>男</td>
+                                            <td>17376594450</td>
+                                            <td>信息科学与工程学院</td>
+                                            <td>计算机174</td>
                                             <td>
                                                 <div class="btn-group">
                                                     <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>学院满意度测评表收集</td>
-                                            <td>2021/01/01</td>
-                                            <td>2021/02/01</td>
-                                            <td><span class="label label-success">进行中</span></td>
-                                            <td>学校管理员</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>机关满意度测评表收集</td>
-                                            <td>2021/01/01</td>
-                                            <td>2021/02/01</td>
-                                            <td><span class="label label-success">进行中</span></td>
-                                            <td>学校管理员</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>后勤满意度测评表收集</td>
-                                            <td>2021/01/01</td>
-                                            <td>2021/02/01</td>
-                                            <td><span class="label label-success">进行中</span></td>
-                                            <td>学校管理员</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>文件上传测试</td>
-                                            <td>2021/01/01</td>
-                                            <td>2021/01/02</td>
-                                            <td><span class="label label-danger">已截止</span></td>
-                                            <td>信工管理员</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>讲座报名表收集</td>
-                                            <td>2021/01/03</td>
-                                            <td>2021/01/10</td>
-                                            <td><span class="label label-danger">已截止</span></td>
-                                            <td>信工学生会</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>征文大赛汇总</td>
-                                            <td>2020/12/21</td>
-                                            <td>2021/01/13</td>
-                                            <td><span class="label label-danger">已截止</span></td>
-                                            <td>信工团委</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
+                                                    <a class="btn btn-xs btn-default" href="#!" title="删除" data-toggle="tooltip"><i class="mdi mdi-window-close"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
                                         </tbody>
                                     </table>
+                                    <nav id="infoPagination" style="text-align: center">
+                                        <ul class="pagination">
+                                            <li class="disabled">
+                                                <a href="#!">
+                                                    <span><i class="mdi mdi-chevron-left"></i></span>
+                                                </a>
+                                            </li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#!">2</a></li>
+                                            <li><a href="#!">3</a></li>
+                                            <li><a href="#!">4</a></li>
+                                            <li><a href="#!">5</a></li>
+                                            <li>
+                                                <a href="#!">
+                                                    <span><i class="mdi mdi-chevron-right"></i></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
                                 </div>
                             </div>
                         </div>
