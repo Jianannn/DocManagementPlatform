@@ -12,7 +12,7 @@ if($user==null||$pwd==null){
 }
 
 if ($ident == "admin"){//在管理员的表中查找用户
-    $sql="SELECT * FROM admin WHERE admin_name='".$user."' AND admin_pwd='".$pwd."';";
+    $sql="SELECT * FROM admin WHERE admin_loginname='".$user."' AND admin_pwd='".$pwd."';";
     $result=$db->query($sql);
     $num_users=$result->num_rows;//在数据库中搜索到符合的用户
     if($num_users!=0){
@@ -27,7 +27,7 @@ if ($ident == "admin"){//在管理员的表中查找用户
 
 }
 else if ($ident == "user"){ //在学生的表中查找用户
-    $sql="SELECT * FROM stu  WHERE stu_name='".$user."' AND stu_pwd='".$pwd."';";
+    $sql="SELECT * FROM stu  WHERE stu_loginname='".$user."' AND stu_pwd='".$pwd."';";
 
     $result=$db->query($sql);
     $num_users=$result->num_rows;//在数据库中搜索到符合的用户

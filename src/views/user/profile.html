@@ -122,12 +122,6 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-xs-12">密码</label>
-                                        <div class="col-xs-12">
-                                            <input class="form-control" type="password" id="pwd-input" name="example-text-input" placeholder="" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
                                         <label class="col-xs-12">姓名</label>
                                         <div class="col-xs-12">
                                             <input class="form-control" type="text" id="name-input" name="example-text-input" placeholder="" disabled>
@@ -137,11 +131,11 @@
                                         <label class="col-xs-12">性别</label>
                                         <div class="col-xs-12">
                                             <label class="radio-inline">
-                                                <input type="radio" id="sex-radio1" name="example-inline-radios" value="1" checked>
+                                                <input type="radio" id="sex-radio1" name="sex-inline-radios" value="1" disabled>
                                                 男
                                             </label>
                                             <label class="radio-inline">
-                                                <input type="radio" id="sex-radio2" name="example-inline-radios" value="0" disabled>
+                                                <input type="radio" id="sex-radio2" name="sex-inline-radios" value="0" disabled>
                                                 女
                                             </label>
                                         </div>
@@ -158,10 +152,16 @@
                                             <input class="form-control" type="text" id="dept-input" name="example-text-input" placeholder="" disabled>
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-12">班级</label>
+                                        <div class="col-xs-12">
+                                            <input class="form-control" type="text" id="class-input" name="example-text-input" placeholder="" disabled>
+                                        </div>
+                                    </div>
                                     <br>
                                     <div class="form-group">
                                         <div class="col-xs-12">
-                                            <button class="btn btn-label btn-primary"><label><i class="mdi mdi-checkbox-marked-circle-outline"></i></label>&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
+                                            <button class="btn btn-label btn-primary" id="submitBt"><label><i class="mdi mdi-checkbox-marked-circle-outline"></i></label>&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
                                             &nbsp;
                                             <button class="btn btn-label btn-warning" onclick="location.reload()"><label><i class="mdi mdi-delete-empty"></i></label>&nbsp;&nbsp;还原&nbsp;&nbsp;</button>
                                         </div>
@@ -185,6 +185,8 @@
 <script type="text/javascript" src="../../../public/js/main.min.js"></script>
 <script type="text/javascript" src="../../../public/js/clock.js"></script>
 <script type="text/javascript" src="../../../public/js/Chart.js"></script>
+
+<script type="text/javascript" src="../../../src/controllers/js/stuProfile.js"></script>
 
 </body>
 </html>
