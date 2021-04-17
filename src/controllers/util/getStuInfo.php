@@ -1,8 +1,8 @@
 <?php
 require "connect.php";//链接数据库
-
+$stu_id = 20001;
 $arr = array();
-$sql="SELECT * FROM stu WHERE stu_id='2000001';";
+$sql="SELECT * FROM stu WHERE stu_id='".$stu_id."';";
 
 $rs = mysqli_query($db, $sql);
 while ($rows = mysqli_fetch_array($rs)) {

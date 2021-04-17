@@ -1,6 +1,6 @@
 <?php
 require "connect.php";//链接数据库
-$admin_id = 100001;
+$admin_id = 10001;
 
 $arr = array();
 $old_pwd = $_POST["old_pwd"];

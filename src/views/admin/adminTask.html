@@ -147,7 +147,7 @@
                                             <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="taskInfo">
                                         <tr>
                                             <td>1</td>
                                             <td>寒假返家统计表收集</td>
@@ -157,11 +157,11 @@
                                             <td>院系管理员</td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="进度" data-toggle="tooltip"><i class="mdi mdi-eye"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="下载" data-toggle="tooltip"><i class="mdi mdi-download"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="暂停" data-toggle="tooltip"><i class="mdi mdi-pause"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="删除" data-toggle="tooltip"><i class="mdi mdi-window-close"></i></a>
+                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip" id="editBt"><i class="mdi mdi-pencil"></i></a>
+                                                    <a class="btn btn-xs btn-default" href="#!" title="进度" data-toggle="tooltip" id="progerssBt"><i class="mdi mdi-eye"></i></a>
+                                                    <a class="btn btn-xs btn-default" href="#!" title="下载" data-toggle="tooltip" id="downloadBt"><i class="mdi mdi-download"></i></a>
+                                                    <a class="btn btn-xs btn-default" href="#!" title="暂停" data-toggle="tooltip" id="pauseBt"><i class="mdi mdi-pause"></i></a>
+                                                    <a class="btn btn-xs btn-default" href="#!" title="删除" data-toggle="tooltip" id="deleteBt"><i class="mdi mdi-window-close"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -225,7 +225,7 @@
                                             <td>信工管理员</td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
+                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip" onclick=""><i class="mdi mdi-pencil"></i></a>
                                                     <a class="btn btn-xs btn-default" href="#!" title="进度" data-toggle="tooltip"><i class="mdi mdi-eye"></i></a>
                                                     <a class="btn btn-xs btn-default" href="#!" title="下载" data-toggle="tooltip"><i class="mdi mdi-download"></i></a>
                                                     <a class="btn btn-xs btn-default" href="#!" title="暂停" data-toggle="tooltip"><i class="mdi mdi-pause"></i></a>
@@ -289,6 +289,8 @@
 <script type="text/javascript" src="../../../public/js/main.min.js"></script>
 <script type="text/javascript" src="../../../public/js/clock.js"></script>
 <script type="text/javascript" src="../../../public/js/Chart.js"></script>
+
+<script type="text/javascript" src="../../controllers/js/adminTask.js"></script>
 
 </body>
 </html>

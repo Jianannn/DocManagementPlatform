@@ -110,7 +110,7 @@
                             <div class="card-body clearfix">
                                 <div class="pull-right">
                                     <p class="h6 text-white m-t-0">用户身份</p>
-                                    <p class="h3 text-white m-b-0">计算机174-王五</p>
+                                    <p class="h3 text-white m-b-0"  id="name">计算机174-王五</p>
                                 </div>
                                 <div class="pull-left"> <span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-account fa-1-5x"></i></span> </div>
                             </div>
@@ -122,7 +122,7 @@
                             <div class="card-body clearfix">
                                 <div class="pull-right">
                                     <p class="h6 text-white m-t-0">待完成任务</p>
-                                    <p class="h3 text-white m-b-0">3 件</p>
+                                    <p class="h3 text-white m-b-0" id="undone">3 件</p>
                                 </div>
                                 <div class="pull-left"> <span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-file fa-1-5x"></i></span> </div>
                             </div>
@@ -133,8 +133,8 @@
                         <div class="card bg-success">
                             <div class="card-body clearfix">
                                 <div class="pull-right">
-                                    <p class="h6 text-white m-t-0">已完成任务</p>
-                                    <p class="h3 text-white m-b-0">3 件</p>
+                                    <p class="h6 text-white m-t-0">共有任务</p>
+                                    <p class="h3 text-white m-b-0" id="count">3 件</p>
                                 </div>
                                 <div class="pull-left"> <span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-file-check fa-1-5x"></i></span> </div>
                             </div>
@@ -163,7 +163,7 @@
                                             <th>发布者</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody  id="taskInfo">
                                         <tr>
                                             <td>1</td>
                                             <td>寒假返家统计表收集</td>
@@ -242,6 +242,8 @@
 <script type="text/javascript" src="../../../public/js/main.min.js"></script>
 <script type="text/javascript" src="../../../public/js/clock.js"></script>
 <script type="text/javascript" src="../../../public/js/Chart.js"></script>
+
+<script type="text/javascript" src="../../../src/controllers/js/stuMain.js"></script>
 
 </body>
 </html>

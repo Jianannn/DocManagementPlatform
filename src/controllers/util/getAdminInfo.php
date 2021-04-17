@@ -1,8 +1,9 @@
 <?php
 require "connect.php";//链接数据库
+$admin_id = 10001;
 
 $arr = array();
-$sql="SELECT * FROM admin WHERE admin_id='100001';";
+$sql="SELECT * FROM admin WHERE admin_id='".$admin_id."';";
 
 
 $rs = mysqli_query($db, $sql);
