@@ -14,15 +14,17 @@
     <link rel="stylesheet" href="../../../public/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
     <!--日期选择插件-->
     <link rel="stylesheet" href="../../../public/js/bootstrap-datepicker/bootstrap-datepicker3.min.css">
-    <style>
-        /*解决wangeditor层级太高覆盖问题*/
-        .w-e-menu {
-            z-index: 2 !important;
-        }
-        .w-e-text-container {
-            z-index: 1 !important;
-        }
-    </style>
+
+    <link href="http://libs.itshubao.com/bootstrap-multiselect/bootstrap-multiselect.css" rel="stylesheet">
+<!--    <style>-->
+<!--        /*解决wangeditor层级太高覆盖问题*/-->
+<!--        .w-e-menu {-->
+<!--            z-index: 2 !important;-->
+<!--        }-->
+<!--        .w-e-text-container {-->
+<!--            z-index: 1 !important;-->
+<!--        }-->
+<!--    </style>-->
 </head>
 
 <body>
@@ -75,14 +77,14 @@
                         <li class="dropdown dropdown-profile">
                             <a href="javascript:void(0)" data-toggle="dropdown">
                                 <img class="img-avatar img-avatar-48 m-r-10" src="../../../public/images/users/avatar.png" alt="管理员" />
-                                <span>院系管理员<span class="caret"></span></span>
+                                <span>徐佳男<span class="caret"></span></span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right">
                                 <li> <a href="profile.html"><i class="mdi mdi-account"></i> 个人信息</a> </li>
                                 <li> <a href="changePwd.html"><i class="mdi mdi-lock-outline"></i> 修改密码</a> </li>
                                 <li> <a href="javascript:void(0)"><i class="mdi mdi-delete"></i> 清空缓存</a></li>
                                 <li class="divider"></li>
-                                <li> <a href="lyear_pages_login.html"><i class="mdi mdi-logout-variant"></i> 退出登录</a> </li>
+                                <li> <a href="../../../index.html"><i class="mdi mdi-logout-variant"></i> 退出登录</a> </li>
                             </ul>
                         </li>
                         <!--切换主题配色-->
@@ -129,15 +131,17 @@
                             <div class="card-body">
                                 <form class="form-horizontal" action="#" method="post" enctype="multipart/form-data" onsubmit="return false;">
                                     <div class="form-group">
-                                        <label class="col-xs-12" for="example-text-input">主题</label>
+                                        <label class="col-xs-12" >主题</label>
                                         <div class="col-xs-12">
-                                            <input class="form-control" type="text" id="example-text-input" name="example-text-input" placeholder="">
+                                            <input class="form-control" type="text" id="title" name="example-text-input" placeholder="">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-xs-12" for="example-text-input">内容</label>
+                                        <label class="col-xs-12">内容</label>
                                         <div class="col-xs-12">
-                                            <div id="testtextarea" name="testcontent"></div>
+                                            <textarea class="form-control" id="content" rows="6" name="description" placeholder=""></textarea>
+                                        </div>
+                                        <div class="col-xs-12" id="show">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -153,23 +157,52 @@
                                     <div class="form-group">
                                         <label class="col-xs-12" >分派任务</label>
                                         <div class="col-xs-12">
-                                            <div class="layui-btn-container">
-                                                <button type="button" class="layui-btn" lay-demo="getChecked">获取选中数据</button>
-                                                <button type="button" class="layui-btn" lay-demo="setChecked">设置节点勾选</button>
-                                                <button type="button" class="layui-btn" lay-demo="reload">重载实例</button>
-                                            </div>
-                                            <div id="test1"></div>
+                                            <select id="selectorGroup" multiple="multiple">
+                                                    <option value="20001">计算机174-徐佳男</option>
+                                                    <option value="20002">计算机171-王五</option>
+                                                    <option value="20003">物理171-张三</option>
+                                                    <option value="20004">材料172-吴亦</option>
+                                                    <option value="20005">小教171-康康</option>
+                                            </select>
+                                        </div>
+                                    </div>
+<!--                                    <div class="form-group">-->
+<!--                                        <label class="col-xs-12" >分派任务</label>-->
+<!--                                        <div class="col-xs-12">-->
+<!--                                            <select id="example-getting-started" multiple="multiple">-->
+<!--                                                <option value="cheese">Cheese</option>-->
+<!--                                                <option value="tomatoes">Tomatoes</option>-->
+<!--                                                <option value="mozarella">Mozzarella</option>-->
+<!--                                                <option value="mushrooms">Mushrooms</option>-->
+<!--                                                <option value="pepperoni">Pepperoni</option>-->
+<!--                                                <option value="onions">Onions</option>-->
+<!--                                            </select>-->
+<!--                                            <div class="layui-btn-container">-->
+<!--                                                <button type="button" class="layui-btn" lay-demo="getChecked">获取选中数据</button>-->
+<!--                                                <button type="button" class="layui-btn" lay-demo="setChecked">设置节点勾选</button>-->
+<!--                                                <button type="button" class="layui-btn" lay-demo="reload">重载实例</button>-->
+<!--                                            </div>-->
+<!--                                            <div id="test1"></div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+                                    <div class="form-group">
+                                        <label class="col-xs-12" >上传附件（仅允许上传20MB以内，且后缀名为ZIP/RAR/7Z的压缩文件）</label>
+                                        <div class="col-xs-12" style="display: inline">
+                                            <p><input type="file" id="file1" name="myFile" /></p>
+                                            <button onclick="doupload()" style="display: inline">上传</button>
+                                            <p id="address"></p>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="form-group">
                                         <div class="col-xs-12">
-                                            <button class="btn btn-label btn-primary"><label><i class="mdi mdi-checkbox-marked-circle-outline"></i></label>&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
+                                            <button class="btn btn-label btn-primary" id="submitBt"><label><i class="mdi mdi-checkbox-marked-circle-outline"></i></label>&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
                                             &nbsp;
                                             <button class="btn btn-label btn-warning" onclick="location.reload()"><label><i class="mdi mdi-delete-empty"></i></label>&nbsp;&nbsp;重置&nbsp;&nbsp;</button>
                                         </div>
                                     </div>
                                 </form>
+
                             </div>
                         </div>
                     </div>
@@ -192,8 +225,8 @@
 <!--图标插件-->
 <script type="text/javascript" src="../../../public/js/Chart.js"></script>
 <!--富文本编辑器插件-->
-<script type="text/javascript" src="../../../public/js/wangEditor/wangEditor.min.js"></script>
-<script type="text/javascript" src="../../../public/js/editor.js"></script>
+<!--<script type="text/javascript" src="../../../public/js/wangEditor/wangEditor.min.js"></script>-->
+<!--<script type="text/javascript" src="../../../public/js/editor.js"></script>-->
 <!-- 时间选择插件 -->
 <script type="text/javascript" src="../../../public/js/bootstrap-datetimepicker/moment.min.js"></script>
 <script type="text/javascript" src="../../../public/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
@@ -203,6 +236,11 @@
 <script type="text/javascript" src="../../../public/js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
 
 <script type="text/javascript" src="../../../public/js/main.min.js"></script>
+<script type="text/javascript" src="../../../public/js/ajaxfileupload.js "></script>
+
+<script type="text/javascript" src="http://libs.itshubao.com/bootstrap-multiselect/bootstrap-multiselect.min.js"></script>
+
+<script type="text/javascript" src="../../../src/controllers/js/addTask.js"></script>
 
 <script>
     layui.use(['tree', 'layer', 'util'], function(){

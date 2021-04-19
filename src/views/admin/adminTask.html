@@ -60,14 +60,14 @@
                         <li class="dropdown dropdown-profile">
                             <a href="javascript:void(0)" data-toggle="dropdown">
                                 <img class="img-avatar img-avatar-48 m-r-10" src="../../../public/images/users/avatar.png" alt="管理员" />
-                                <span>院系管理员<span class="caret"></span></span>
+                                <span>徐佳男<span class="caret"></span></span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right">
                                 <li> <a href="profile.html"><i class="mdi mdi-account"></i> 个人信息</a> </li>
                                 <li> <a href="changePwd.html"><i class="mdi mdi-lock-outline"></i> 修改密码</a> </li>
                                 <li> <a href="javascript:void(0)"><i class="mdi mdi-delete"></i> 清空缓存</a></li>
                                 <li class="divider"></li>
-                                <li> <a href="lyear_pages_login.html"><i class="mdi mdi-logout-variant"></i> 退出登录</a> </li>
+                                <li> <a href="../../../index.html"><i class="mdi mdi-logout-variant"></i> 退出登录</a> </li>
                             </ul>
                         </li>
                         <!--切换主题配色-->
@@ -113,17 +113,17 @@
                                 <form class="pull-right search-bar" method="get" action="#!" role="form">
                                     <div class="input-group">
                                         <div class="input-group-btn">
+                                            <input id="hiddenText" type="text" style="display:none" />
                                             <input type="hidden" name="search_field" id="search-field" value="title">
                                             <button class="btn btn-default dropdown-toggle" id="search-btn" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="false">
-                                                全局 <span class="caret"></span>
+                                                标题 <span class="caret"></span>
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li> <a tabindex="-1" href="javascript:void(0)" data-field="title">全部</a> </li>
-                                                <li> <a tabindex="-1" href="javascript:void(0)" data-field="title">姓名</a> </li>
-                                                <li> <a tabindex="-1" href="javascript:void(0)" data-field="cat_name">主题</a> </li>
+                                                <li> <a tabindex="1" href="javascript:void(0)" data-field="title">标题</a> </li>
+                                                <li> <a tabindex="3" href="javascript:void(0)" data-field="id">ID</a> </li>
                                             </ul>
                                         </div>
-                                        <input type="text" class="form-control" value="" name="keyword" placeholder="请输入搜索内容">
+                                        <input type="text" class="form-control" value="" name="keyword" placeholder="请输入搜索内容" id="searchInput">
                                     </div>
                                 </form>
                                 <div class="toolbar-btn-action">
@@ -138,7 +138,7 @@
                                     <table class="table table-hover">
                                         <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>ID</th>
                                             <th>任务名称</th>
                                             <th>开始日期</th>
                                             <th>截止日期</th>
@@ -148,125 +148,7 @@
                                         </tr>
                                         </thead>
                                         <tbody id="taskInfo">
-                                        <tr>
-                                            <td>1</td>
-                                            <td>寒假返家统计表收集</td>
-                                            <td>2021/02/01</td>
-                                            <td>2020/02/05</td>
-                                            <td><span class="label label-warning">未开始</span></td>
-                                            <td>院系管理员</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip" id="editBt"><i class="mdi mdi-pencil"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="进度" data-toggle="tooltip" id="progerssBt"><i class="mdi mdi-eye"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="下载" data-toggle="tooltip" id="downloadBt"><i class="mdi mdi-download"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="暂停" data-toggle="tooltip" id="pauseBt"><i class="mdi mdi-pause"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="删除" data-toggle="tooltip" id="deleteBt"><i class="mdi mdi-window-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>学院满意度测评表收集</td>
-                                            <td>2021/01/01</td>
-                                            <td>2021/02/01</td>
-                                            <td><span class="label label-success">进行中</span></td>
-                                            <td>学校管理员</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="进度" data-toggle="tooltip"><i class="mdi mdi-eye"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="下载" data-toggle="tooltip"><i class="mdi mdi-download"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="暂停" data-toggle="tooltip"><i class="mdi mdi-pause"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="删除" data-toggle="tooltip"><i class="mdi mdi-window-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>机关满意度测评表收集</td>
-                                            <td>2021/01/01</td>
-                                            <td>2021/02/01</td>
-                                            <td><span class="label label-success">进行中</span></td>
-                                            <td>学校管理员</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="进度" data-toggle="tooltip"><i class="mdi mdi-eye"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="下载" data-toggle="tooltip"><i class="mdi mdi-download"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="暂停" data-toggle="tooltip"><i class="mdi mdi-pause"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="删除" data-toggle="tooltip"><i class="mdi mdi-window-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>后勤满意度测评表收集</td>
-                                            <td>2021/01/01</td>
-                                            <td>2021/02/01</td>
-                                            <td><span class="label label-success">进行中</span></td>
-                                            <td>学校管理员</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="进度" data-toggle="tooltip"><i class="mdi mdi-eye"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="下载" data-toggle="tooltip"><i class="mdi mdi-download"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="暂停" data-toggle="tooltip"><i class="mdi mdi-pause"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="删除" data-toggle="tooltip"><i class="mdi mdi-window-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>文件上传测试</td>
-                                            <td>2021/01/01</td>
-                                            <td>2021/01/02</td>
-                                            <td><span class="label label-danger">已截止</span></td>
-                                            <td>信工管理员</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip" onclick=""><i class="mdi mdi-pencil"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="进度" data-toggle="tooltip"><i class="mdi mdi-eye"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="下载" data-toggle="tooltip"><i class="mdi mdi-download"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="暂停" data-toggle="tooltip"><i class="mdi mdi-pause"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="删除" data-toggle="tooltip"><i class="mdi mdi-window-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>讲座报名表收集</td>
-                                            <td>2021/01/03</td>
-                                            <td>2021/01/10</td>
-                                            <td><span class="label label-danger">已截止</span></td>
-                                            <td>信工学生会</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="进度" data-toggle="tooltip"><i class="mdi mdi-eye"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="下载" data-toggle="tooltip"><i class="mdi mdi-download"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="暂停" data-toggle="tooltip"><i class="mdi mdi-pause"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="删除" data-toggle="tooltip"><i class="mdi mdi-window-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>征文大赛汇总</td>
-                                            <td>2020/12/21</td>
-                                            <td>2021/01/13</td>
-                                            <td><span class="label label-danger">已截止</span></td>
-                                            <td>信工团委</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="进度" data-toggle="tooltip"><i class="mdi mdi-eye"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="下载" data-toggle="tooltip"><i class="mdi mdi-download"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="暂停" data-toggle="tooltip"><i class="mdi mdi-pause"></i></a>
-                                                    <a class="btn btn-xs btn-default" href="#!" title="删除" data-toggle="tooltip"><i class="mdi mdi-window-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+
                                         </tbody>
                                     </table>
                                 </div>

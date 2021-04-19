@@ -66,7 +66,7 @@
                                 <li> <a href="changePwd.html"><i class="mdi mdi-lock-outline"></i> 修改密码</a> </li>
                                 <li> <a href="javascript:void(0)"><i class="mdi mdi-delete"></i> 清空缓存</a></li>
                                 <li class="divider"></li>
-                                <li> <a href="lyear_pages_login.html"><i class="mdi mdi-logout-variant"></i> 退出登录</a> </li>
+                                <li> <a href="../../../index.html"><i class="mdi mdi-logout-variant"></i> 退出登录</a> </li>
                             </ul>
                         </li>
                         <!--切换主题配色-->
@@ -112,17 +112,17 @@
                                 <form class="pull-right search-bar" method="get" action="#!" role="form">
                                     <div class="input-group">
                                         <div class="input-group-btn">
+                                            <input id="hiddenText" type="text" style="display:none" />
                                             <input type="hidden" name="search_field" id="search-field" value="title">
                                             <button class="btn btn-default dropdown-toggle" id="search-btn" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="false">
-                                                全局 <span class="caret"></span>
+                                                标题 <span class="caret"></span>
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li> <a tabindex="-1" href="javascript:void(0)" data-field="title">全部</a> </li>
-                                                <li> <a tabindex="-1" href="javascript:void(0)" data-field="title">姓名</a> </li>
-                                                <li> <a tabindex="-1" href="javascript:void(0)" data-field="cat_name">主题</a> </li>
+                                                <li> <a tabindex="1" href="javascript:void(0)" data-field="title">标题</a> </li>
+                                                <li> <a tabindex="2" href="javascript:void(0)" data-field="issuer">发布者</a> </li>
                                             </ul>
                                         </div>
-                                        <input type="text" class="form-control" value="" name="keyword" placeholder="请输入搜索内容">
+                                        <input type="text" class="form-control" value="" name="keyword" placeholder="请输入搜索内容" id="searchInput">
                                     </div>
                                 </form>
                             </div>
@@ -134,7 +134,7 @@
                                     <table class="table table-hover">
                                         <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>ID</th>
                                             <th>任务名称</th>
                                             <th>开始日期</th>
                                             <th>截止日期</th>
@@ -143,7 +143,7 @@
                                             <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="taskInfo">
                                         <tr>
                                             <td>1</td>
                                             <td>寒假返家统计表收集</td>
@@ -257,6 +257,8 @@
 <script type="text/javascript" src="../../../public/js/main.min.js"></script>
 <script type="text/javascript" src="../../../public/js/clock.js"></script>
 <script type="text/javascript" src="../../../public/js/Chart.js"></script>
+
+<script type="text/javascript" src="../../../src/controllers/js/stuTask.js"></script>
 
 </body>
 </html>
