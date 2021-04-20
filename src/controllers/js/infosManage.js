@@ -84,8 +84,8 @@ $(document).ready(function(){
 function edit(id,name){
     var taskID =  parseInt(name);
     if (id == "editBt"){
-        alert(field);
-        alert("开发中");
+        window.name = taskID;
+        window.location = '../../views/admin/profileManage.html';
     }else if (id == "deleteBt"){
         var truthBeTold = window.confirm("您确定要删除此任务吗？本次操作不可撤销。");
         if (truthBeTold) {

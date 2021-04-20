@@ -1,4 +1,5 @@
 var add = '/upload/寒假返家统计表收集/1618852567_test1.zip';
+var msg_id = window.name;
 function doupload(){
     $.ajaxFileUpload
     (

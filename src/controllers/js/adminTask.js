@@ -86,10 +86,10 @@ $(document).ready(function(){
 function edit(id,name){
     var taskID =  parseInt(name);
     if (id == "editBt"){
-        alert(field);
-        alert("开发中");
+        alert("暂未开放");
     }else if (id == "progressBt"){
-        alert("开发中");
+        window.name = taskID;
+        window.location = '../../views/admin/taskProcess.html';
     }else if (id == "downloadBt"){
         var downloadURL = 'http://localhost:8888/src/controllers/util/upload/zip/';
         $.post("/src/controllers/util/getTaskInfo.php",{"taskID":taskID},function (data) {

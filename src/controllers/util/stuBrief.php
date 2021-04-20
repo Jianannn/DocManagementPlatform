@@ -12,7 +12,7 @@ while ($rows = mysqli_fetch_array($rs)) {
 $msgCount = $arr[0][0];
 
 $brr = array();
-$sql = "SELECT COUNT(1) FROM msg WHERE recipien_id ='".$stu_id."'AND submit = 0 ;";
+$sql = "SELECT COUNT(1) FROM msg WHERE recipien_id ='".$stu_id."'AND submit = 0 AND flag = 1;";
 $rs = mysqli_query($db, $sql);
 while ($rows = mysqli_fetch_array($rs)) {
     array_push($brr, $rows);

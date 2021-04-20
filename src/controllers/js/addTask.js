@@ -47,7 +47,7 @@ $(document).ready(function() {
             $.post("/src/controllers/util/addNewTask.php",{"selectResult":selectResult,"title":title,"content":content,"begin":begin,"end":end,"url":url},function (data) {
                 console.log(data);
                 alert("添加成功！");
-                history.back(-1);
+                history.go(-1);
             });
         }
         console.log(selectResult);

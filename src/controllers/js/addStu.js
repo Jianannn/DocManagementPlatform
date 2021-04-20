@@ -12,6 +12,7 @@ $(document).ready(function(){
             if (data == 1){
                 alert("添加成功");
                 location.reload();
+                history.go(-1);
             }
             else {
                 alert("添加失败");
